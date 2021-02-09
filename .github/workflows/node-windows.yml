@@ -28,7 +28,7 @@ jobs:
 #    - name: run webpack 4 tests
 #      run: npm run test:v4
     - name: set webpack 5 peer dependency
-      run: 'node set-peer-deps.js "^5"'
+      run: 'node set-webpack-version.js "^5"'
     - name: install webpack 5
       run: npm install
     - name: cat package.json
