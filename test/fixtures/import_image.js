@@ -1,1 +1,1 @@
-import '../../assets/manifest.svg';
+import '../../assets/logo.png';

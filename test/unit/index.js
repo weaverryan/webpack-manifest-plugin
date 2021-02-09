@@ -196,7 +196,7 @@ if (!webpack.version.startsWith('4')) {
       module: {
         rules: [
           {
-            test: /\.(svg)/,
+            test: /\.(png)/,
             type: 'asset/resource'
           }
         ]
