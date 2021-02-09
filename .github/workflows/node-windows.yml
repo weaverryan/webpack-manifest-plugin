@@ -31,5 +31,7 @@ jobs:
       run: npm install webpack@^5.0.0 -D
     - name: run install again
       run: npm install
+    - name: cat package.json
+      run: type package.json
     - name: run webpack 5 tests
       run: npm run test:v5
