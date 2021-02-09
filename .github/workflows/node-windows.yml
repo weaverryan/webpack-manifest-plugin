@@ -25,5 +25,7 @@ jobs:
       run: git branch -f master origin/master
     - name: npm install
       run: npm ci
+    - name: install webpack 5
+      run: npm install webpack@^5.0.0 -D
     - name: run tests
       run: npm run test
