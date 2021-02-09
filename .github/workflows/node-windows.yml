@@ -28,6 +28,6 @@ jobs:
 #    - name: run webpack 4 tests
 #      run: npm run test:v4
     - name: install webpack 5
-      run: npm install webpack@^5.0.0 -D
+      run: npm install
     - name: run webpack 5 tests
       run: npm run test:v5
