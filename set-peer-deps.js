@@ -1,3 +1,9 @@
+/*
+ * This file helps to set the "peerDependencies" key of package.json.
+ *
+ * This is needed for npm 6 on Windows, where simply installing Webpack 5
+ * is not enough, and causes very subtle behavior changes.
+ */
 const fs = require('fs');
 const path = require('path');
 
