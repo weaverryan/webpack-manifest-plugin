@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [ '14', '12', '10' ]
+        node: [ '14', '12', '15' ]
 
     name: ${{ matrix.node }} (Windows)
     steps:
@@ -23,7 +23,15 @@ jobs:
         node-version: ${{ matrix.node }}
     - name: checkout master
       run: git branch -f master origin/master
-    - name: npm install
-      run: npm ci
-    - name: run tests
-      run: npm run test
+#    - name: npm install
+#      run: npm ci
+#    - name: run webpack 4 tests
+#      run: npm run test:v4
+    - name: set webpack 5 peer dependency
+      run: 'node set-webpack-version.js "^5"'
+    - name: install webpack 5
+      run: npm install
+    - name: cat package.json
+      run: type package.json
+    - name: run webpack 5 tests
+      run: npm run test:v5
