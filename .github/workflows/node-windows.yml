@@ -23,9 +23,11 @@ jobs:
         node-version: ${{ matrix.node }}
     - name: checkout master
       run: git branch -f master origin/master
-    - name: npm install
-      run: npm ci
+#    - name: npm install
+#      run: npm ci
+#    - name: run webpack 4 tests
+#      run: npm run test:v4
     - name: install webpack 5
       run: npm install webpack@^5.0.0 -D
-    - name: run tests
-      run: npm run test
+    - name: run webpack 5 tests
+      run: npm run test:v5
