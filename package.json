@@ -25,7 +25,7 @@
     "security": "npm audit --audit-level=moderate",
     "test": "npm run test:v5",
     "test:v4": "ava",
-    "test:v5": "rd /s /q node_modules && npm install webpack@^5.0.0 && node test/unit/test.js"
+    "test:v5": "npm install webpack@^5.0.0 -D && node test/unit/test.js"
   },
   "files": [
     "lib",
