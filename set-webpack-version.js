@@ -1,8 +1,11 @@
 /*
- * This file helps to set the "peerDependencies" key of package.json.
+ * This file sets Webpack version - both devDependencies and peerDependencies.
  *
- * This is needed for npm 6 on Windows, where simply installing Webpack 5
- * is not enough, and causes very subtle behavior changes.
+ * This is, for some reason, needed with Windows and maybe npm 6. Running
+ * "npm install webpack -D" AND manually updating the peerDependencies
+ * (because npm 6 does not do that but npm 7 does) is not enough. For some
+ * reason why must, by hand, update the package.json file first and then
+ * run a normal "npm install".
  */
 const fs = require('fs');
 const path = require('path');
